@@ -1,1 +1,3 @@
-flask_ngrok\.authtoken.txt
+flask_ngrok/.authtoken.txt
+
+aws_learning/rootkey.csv
