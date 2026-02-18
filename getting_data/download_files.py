@@ -1,3 +1,7 @@
+'''
+This script makes the download from eesc.usp thesis repository
+of every thesis.pdf associated with Numerical Analysis
+'''
 
 import os
 import time
@@ -71,9 +75,12 @@ while n_i < n:
 
 for link in link_thesis:
     try:
-        response = requests.get(url)
-        file_name = link.split("/")[-1]
-        with open(f"usp_numerical_analysis_thesis/{file_name}", "wb") as f:
+        response = requests.get(link)
+        file_path = os.path.join(
+            os.path.join(_this_path, 
+                         "usp_numerical_analysis_thesis"), 
+                         link.split("/")[-1])
+        with open(file_path, "wb") as f:
             f.write(response.content)
 
     except Exception as e:
