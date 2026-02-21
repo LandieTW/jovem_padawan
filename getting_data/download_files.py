@@ -7,6 +7,8 @@ import os
 import time
 import warnings
 
+import tqdm
+
 from bs4 import BeautifulSoup
 import requests
 
